@@ -2,7 +2,7 @@
 
 const About = () => {
     return (
-        <section id="about" className="bg-blue-100 min-h-screen py-20 lg:py-50 px-4">
+        <section id="about" className="bg-blue-100 min-h-screen py-40 md:py-80 lg:py-50 px-6">
             <div className="max-w-7xl mx-auto lg:flex gap-10">
                 <div className="max-w-md">
                     <img src="/src/assets/images.jpg" alt="image" />

@@ -21,7 +21,7 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="services" className="min-h-screen py-20 lg:py-40 px-4">
+        <section id="services" className="min-h-screen py-20 md:py-80 lg:py-40 px-6">
             <div className="max-w-7xl mx-auto space-y-2">
                 <p className="upparcase text-blue-500 font-semibold">Our Services</p>
                 <h2 className="text-3xl lg:text-4xl font-bold">Solutions Designed to Move Your Business Forward</h2>

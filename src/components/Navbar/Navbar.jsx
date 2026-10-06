@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import NavLinks from "./Navlinks";
 import { IoMenu } from "react-icons/io5";
+import NavLinks from "./NavLinks";
 
 const Navbar = () => {
 
@@ -72,16 +72,16 @@ const Navbar = () => {
         });
 
         setIsMenuOpen(false);
-    }
+    };
 
     return (
         <header className="w-full shadow-md fixed top-0 z-50 bg-white/80 backdrop-blur-md">
             <nav className="nav flex max-w-7xl mx-auto items-center justify-between py-4 px-6">
                 <button type="button"
                     onClick={() => handleMenu("home")}
-
-                    className="text-xl lg:text-4xl font-bold">Biswas IT Farm</button>
-
+                    className="text-xl lg:text-4xl font-bold cursor-pointer">
+                    Biswas IT Farm
+                </button>
                 {/* desktop */}
                 <div className="hidden gap-4 lg:flex font-semibold">
                     {
@@ -95,7 +95,9 @@ const Navbar = () => {
                     }
                 </div>
 
-                <button className="hidden lg:block px-4 py-2 bg-blue-500 text-white rounded-md font-semibold">
+                <button
+                    onClick={() => handleMenu("contact")}
+                    className="hidden lg:block px-4 py-2 bg-blue-500 text-white rounded-md font-semibold cursor-pointer">
                     Get Started
                 </button>
 
@@ -108,17 +110,17 @@ const Navbar = () => {
             {/* mobile navigation */}
             {
                 isMenuOpen && (
-                    <div className="gap-4 lg:hidden font-semibold flex flex-col p-4 border-t border-slate-200">
-                    {
-                        navItems.map((item) =>
-                            <NavLinks key={item.id}
-                                label={item.label}
-                                active={activeSection === item.id}
-                                onClick={() => handleMenu(item.id)}
-                            />
-                        )
-                    }
-                </div>
+                    <div className="gap-4 lg:hidden font-semibold flex flex-col p-4 border-t border-slate-200 items-start">
+                        {
+                            navItems.map((item) =>
+                                <NavLinks key={item.id}
+                                    label={item.label}
+                                    active={activeSection === item.id}
+                                    onClick={() => handleMenu(item.id)}
+                                />
+                            )
+                        }
+                    </div>
                 )
             }
         </header>

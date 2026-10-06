@@ -28,7 +28,7 @@ const data = [
 
 const WhyChooseUs = () => {
     return (
-        <section id="why-us" className="min-h-screen scroll-mt-20 py-20 px-4 bg-blue-100">
+        <section id="why-us" className="min-h-screen scroll-mt-20 py-20 md:py-80 px-6 bg-blue-100">
             <div className="max-w-7xl mx-auto flex flex-wrap gap-10">
                 <div className="space-y-4 w-1/2">
                     <p className="uppercase text-blue-400 font-semibold">Why Choose Us</p>
